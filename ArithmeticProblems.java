@@ -7,25 +7,25 @@ public class ArithmeticProblems{
     boolean correctness;
     for (int i = 1; i<=10; i++){
       int problem = rand.nextInt(3);
-      if (problem = 0){
+      if (problem == 0){
         correctness = addition();
       }
-      else if (problem = 1){
+      else if (problem == 1){
         correctness = subtraction();
       }
-      else if (problem = 2){
+      else if (problem == 2){
         correctness = multiplication();
       }
-      else if (problem = 3){
+      else if (problem == 3){
         correctness = division();
       }
     }
-    if (correctness == true){
+    //if (correctness == true){
       //car will mooooooove
-    }
-    else if (correctness = false){
+    //}
+    //else if (correctness == false){
       //car will NOT mooooooove
-    }
+    //}
   }
 
   public static boolean addition(){
@@ -36,10 +36,10 @@ public class ArithmeticProblems{
 
     System.out.printf("%d + %d = ___%n", x, y);
     int userAnswer = getUserInput();
-    if (x + y = userAnswer){
+    if (x + y == userAnswer){
       return true;
     }
-    else if (x + y != userAnswer){
+    else{
       return false;
     }
   }
@@ -47,19 +47,19 @@ public class ArithmeticProblems{
     Random rand = new Random();
 
     int x = rand.nextInt(100);
-    int y = rand.nextInt(x,100);
+    int y = rand.nextInt(100);
 
     while (x - y < 0){
-      int x = rand.nextInt(100);
-      int y = rand.nextInt(100);
+      x = rand.nextInt(100);
+      y = rand.nextInt(100);
     }
 
     System.out.printf("%d - %d = ___%n", x, y);
     int userAnswer = getUserInput();
-    if (x - y = userAnswer){
+    if (x - y == userAnswer){
       return true;
     }
-    else if (x - y != userAnswer){
+    else{
       return false;
     }
   }
@@ -71,34 +71,36 @@ public class ArithmeticProblems{
 
     System.out.printf("%d * %d = ___%n", x, y);
     int userAnswer = getUserInput();
-    if (x * y = userAnswer){
+    if (x * y == userAnswer){
       return true;
     }
-    else if (x * y != userAnswer){
+    else{
       return false;
     }
   }
-  public static boolean addition(){
+  public static boolean division(){
     Random rand = new Random();
 
     int x = rand.nextInt(144);
     int y = rand.nextInt(12);
 
     while (x % y != 0){
-      int x = rand.nextInt(144);
-      int y = rand.nextInt(12);
+      x = rand.nextInt(144);
+      y = rand.nextInt(12);
     }
 
     System.out.printf("%d / %d = ___%n", x, y);
     int userAnswer = getUserInput();
-    if (x / y = userAnswer){
+    if (x / y == userAnswer){
       return true;
     }
-    else if (x / y != userAnswer){
+    else{
       return false;
     }
   }
   public static int getUserInput(){
-    //put stuffs here
+    Scanner answer = new Scanner(System.in);
+    int a = answer.nextInt();
+    return a;
   }
 }
